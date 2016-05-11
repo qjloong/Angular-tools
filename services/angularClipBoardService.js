@@ -1,6 +1,15 @@
 /**
  * Created by ylicloud on 16/5/11.
  */
+
+/**
+ * 1、使用是模块明替换为自己的模块名  －－ angular.module('YOURAPP')
+ *   2、Controller中 引入 'ngClipBoardService'
+ *       3、 使用 if(ngClipBoardService.supported){
+ *              ngClipBoardService.copyText(' －－－－－－TODO： 需要复制到剪切版的内容 －－－－－－')
+ *       }
+ */
+
 angular.module('utils.services').service('ngClipBoardService', function ($document) {
 
     function createNode(text) {
